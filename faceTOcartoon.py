@@ -27,8 +27,8 @@ img_blur = cv2.medianBlur(img_gray, 7)
 img_edge = cv2.adaptiveThreshold(img_blur, 255,
                                  cv2.ADAPTIVE_THRESH_MEAN_C,
                                  cv2.THRESH_BINARY,
-                                 blockSize=13,
-                                 C=2)
+                                 blockSize=9,
+                                 C=4)
 
 img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
 img_cartoon = cv2.bitwise_and(img_color, img_edge)
